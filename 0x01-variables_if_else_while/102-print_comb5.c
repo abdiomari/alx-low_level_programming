@@ -1,45 +1,38 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Succes)
+ * main - Program entry point
+ * Description: Prints all possible combinations of two-digit numbers
+ * Return: 0
  */
-
 int main(void)
 {
-	int tho;
-	int hun;
-	int ten;
-	int bas;
+	int x;
+	int y;
+	int max = 100;
 
-for ( tho = 0 ; tho < 10 ; tho++)
-{	
-
-	for (hun = 0 ; hun <= 10 ; hun++)
+	for (x = 0; x < max ; x++)
 	{
-	
-		for (ten = 0 ; ten < 10 ; ten++)
+		for (y = x + 1 ; y < max; y++)
 		{
-			for ( bas = 0 ; bas < 10 ; bas++)
-			{
-				putchar('0' + tho);
-				putchar('0' + hun);
-				putchar(32);
-				putchar('0' + ten);
-				putchar('0' + bas);
-				if (!(tho == 9 && hun == 8))
-				{
-					putchar(',');
-					putchar(32);
-				}
-				bas++;
-			}
+			putchar (x / 10 + '0');
+			putchar (x % 10 + '0');
+			putchar (' ');
+
+			putchar (y / 10 + '0');
+			putchar (y % 10 + '0');
+
+			if (x == 98 && y == 99)
+				break;
+
+			putchar(',');
+			putchar (' ');
+
 		}
+
 	}
-}
+
 	putchar('\n');
+
 	return (0);
 }
-
-

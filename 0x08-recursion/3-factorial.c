@@ -2,7 +2,7 @@ include "main.h"
 
 /**
  * factorial - returns factorial of a number
- * @h: number to calc the factorial
+ * @n: number to calc the factorial
  * Return: factorial of n
  */
 

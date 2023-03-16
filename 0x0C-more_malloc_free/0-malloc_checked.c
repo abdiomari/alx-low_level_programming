@@ -1,4 +1,4 @@
-#include <stdlib.h> // for malloc, free, and exit
+#include <stdlib.h>
 
 /**
  * malloc_checked - allocates memory using malloc
@@ -10,9 +10,11 @@
 void *malloc_checked(ubsigned int b)
 {
 	void *p = malloc(b);
-	if (p == NULL) {
+
+	if (p == NULL)
+	{
 		free(p);
 		exit(98);
 	}
-	return p;
+	return (p);
 }
